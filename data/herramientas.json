@@ -1,0 +1,318 @@
+{
+  "siem": [
+    {
+      "nombre": "Wazuh",
+      "descripcion": "SIEM open source con agentes para monitoreo de seguridad.",
+      "link": "https://wazuh.com",
+      "guias": [
+        {
+          "nombre": "Guía Inicial", "url": "http://linktest.com", "colaborador": "Romina Torres"
+        },
+        {
+         "nombre": "Guía Intermedia", "url": "http://linktest.com", "colaborador": "Romina Torres"
+        }
+
+      ],
+      "licencia": "Open Source",
+      "capa de defensa": "Operaciones"
+    },
+    {
+      "nombre": "Splunk",
+      "descripcion": "Plataforma empresarial para análisis de logs.",
+      "link": "https://www.splunk.com",
+      "guias": [
+        {
+          "nombre": "Guía Inicial", "url": "http://linktest.com", "colaborador": "Rodrigo Quintana"
+        },
+        {
+         "nombre": "Guía Intermedia", "url": "http://linktest.com", "colaborador": "Rodrigo Quintana"
+        }
+
+      ], 
+      "licencia": "Comercial",
+      "capa de defensa": "Operaciones"
+    },
+    {
+      "nombre": "IBM QRadar",
+      "descripcion": "Descripción: Plataforma SIEM ampliamente utilizada en grandes empresas, con capacidades avanzadas de análisis.",
+      "link": "https://www.ibm.com/qradar",
+      "licencia": "Comercial",
+      "capa de defensa": "Operaciones"
+    },
+    {
+      "nombre": "Elastic Security",
+      "descripcion": "Plataforma SIEM open source basada en Elastic Stack (ELK), enfocada en búsqueda y visualización de datos de seguridad.",
+      "link": "https://www.elastic.co/security",
+      "licencia": "Open Source",
+      "capa de defensa": "Operaciones"
+    },
+    {
+      "nombre": "Graylog",
+      "descripcion": "Descripción: Solución open source para gestión centralizada y análisis de logs con interfaz intuitiva.",
+      "link": "https://www.graylog.org",
+      "licencia": "Open Source",
+      "capa de defensa": "Operaciones"
+    }
+  ],
+  "edr": [
+    {
+      "nombre": "Microsoft Defender",
+      "descripcion": "Solución EDR nativa de Microsoft.",
+      "link": "https://www.microsoft.com/security/business/threat-protection/microsoft-defender-endpoint",
+      "tipo": "EDR"
+    },
+    {
+      "nombre": "CrowdStrike Falcon",
+      "descripcion": "Plataforma EDR cloud para endpoints.",
+      "link": "https://www.crowdstrike.com",
+      "licencia": "Comercial",
+      "tipo": "EDR"
+    },
+    {
+      "nombre": "Apex One",
+      "descripcion": "Solución EDR de Trend Micro.",
+      "link": "https://www.trendmicro.com/es_mx/business.html",
+      "licencia": "Comercial",
+      "tipo": "EDR"
+    },
+    {
+      "nombre": "SentinelOne",
+      "descripcion": "Solución EDR avanzada, con inteligencia artificial y capacidad de rollback automático.",
+      "link": "https://www.sentinelone.com",
+      "licencia": "Comercial",
+      "tipo": "EDR"
+    },
+    {
+      "nombre": "Cybereason",
+      "descripcion": "Plataforma EDR orientada a detección proactiva de amenazas avanzadas.",
+      "link": "https://www.cybereason.com",
+      "licencia": "Comercial",
+      "tipo": "EDR"
+    }
+  ],
+  "soar": [
+    {
+      "nombre": "Cortex XSOAR",
+      "descripcion": "Plataforma SOAR avanzada con playbooks automáticos, integración nativa con productos Palo Alto y marketplace amplio.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "Splunk SOAR",
+      "descripcion": "Solución de Splunk para automatizar tareas y respuestas ante incidentes. Altamente integrable con Splunk Enterprise.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "IBM Security QRadar SOAR",
+      "descripcion": "Orientado a entornos empresariales que ya usan QRadar SIEM. Potente en flujos personalizados.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "DFLabs IncMan SOAR",
+      "descripcion": "Plataforma SOAR con capacidades de correlación, respuesta y análisis forense automatizado.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "Swimlane",
+      "descripcion": "SOAR flexible con enfoque en visual workflows y bajo código. Buen soporte multi-vendor.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "Google Chronicle SOAR",
+      "descripcion": "Plataforma SOAR basada en la nube, adquirida por Google. Alta escalabilidad.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "Rapid7 Insight Connect",
+      "descripcion": "SOAR diseñado para integrarse con InsightVM e InsightIDR. Automatización sencilla sin necesidad de programación compleja.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "Tines",
+      "descripcion": "Plataforma SOAR sin código, orientada a flujos simples, visuales y de rápida implementación.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "StackStorm",
+      "descripcion": "Proyecto open source de automatización estilo SOAR, extensible y usado en entornos personalizados",
+      "licencia": "Open Source"
+    },
+    {
+      "nombre": "Shuffle",
+      "descripcion": "SOAR moderno, open source, basado en flujos visuales. Buen punto de partida para equipos pequeños.",
+      "licencia": "Open Source"
+    },
+    {
+      "nombre": "Siemplify",
+      "descripcion": "Plataforma SOAR robusta, recientemente adquirida por Google Cloud, potente en gestión de casos complejos.",
+      "licencia": "Comercial"
+    },
+    {
+      "nombre": "Fortinet FortiSOAR",
+      "descripcion": "Integración nativa con el ecosistema Fortinet, visualización de incidentes, gestión de casos y flujos automáticos.",
+      "licencia": "Comercial"
+    }
+  ],
+
+  "firewall": [
+    {
+    "nombre": "pfSense",
+    "descripcion": "Distribución de firewall open source basada en FreeBSD.",
+    "link": "https://www.pfsense.org/"
+    },
+    {
+    "nombre": "OPNsense",
+    "descripcion": "Firewall de código abierto con una interfaz moderna y plugins.",
+    "link": "https://opnsense.org/"
+    },
+    {
+    "nombre": "Fortinet FortiGate",
+    "descripcion": "Firewall de próxima generación con capacidades avanzadas de seguridad.",
+    "link": "https://www.fortinet.com/products/next-generation-firewall"
+    },
+    {
+    "nombre": "Cisco ASA",
+    "descripcion": "Solución de firewall tradicional y VPN de Cisco.",
+    "link": "https://www.cisco.com/c/en/us/products/security/adaptive-security-appliance-asa-software/index.html"
+    },
+    {
+    "nombre": "Sophos XG Firewall",
+    "descripcion": "Firewall con funciones avanzadas de control de aplicaciones y red.",
+    "link": "https://www.sophos.com/en-us/products/firewall"
+    },
+    {
+    "nombre": "Untangle NG Firewall",
+    "descripcion": "Firewall para pymes con interfaz amigable y múltiples módulos de seguridad.",
+    "link": "https://www.untangle.com/"
+    },
+    {
+    "nombre": "IPFire",
+    "descripcion": "Firewall modular y open source ideal para entornos pequeños y medianos.",
+    "link": "https://www.ipfire.org/"
+    },
+    {
+    "nombre": "Check Point NGFW",
+    "descripcion": "Firewall de empresa con alto rendimiento y prevención de amenazas.",
+    "link": "https://www.checkpoint.com/products/next-generation-firewall/"
+    },
+    {
+    "nombre": "Palo Alto Networks NGFW",
+    "descripcion": "Firewall líder de próxima generación, reconocido por sus capacidades avanzadas de prevención de amenazas.",
+    "link": "https://www.paloaltonetworks.com/network-security/next-generation-firewall" 
+    },
+    {
+    "nombre": "Juniper SRX Series",
+    "descripcion": "Firewall empresarial de alto rendimiento con enfoque en rendimiento y seguridad perimetral.",
+    "link": "https://www.juniper.net/us/en/products/security/srx-series.html"
+    },
+    {
+    "nombre": "WatchGuard Firebox",
+    "descripcion": "Firewall orientado a medianas empresas con gestión simplificada y robusta seguridad.",
+    "link": "https://www.watchguard.com/wgrd-products/firewall-appliances"
+    }
+  ],
+  "Vulnerability Management": [
+  {
+    "nombre": "Tenable Nessus",
+    "descripcion": "Herramienta avanzada para evaluación y gestión continua de vulnerabilidades, ampliamente utilizada en la industria.",
+    "link": "https://es-la.tenable.com/products/nessus"
+  },
+  {
+    "nombre": "Qualys Vulnerability Management",
+    "descripcion": "Plataforma cloud integral que ofrece escaneo, monitoreo continuo y gestión centralizada de vulnerabilidades.",
+    "link": "https://www.qualys.com/apps/vulnerability-management/"
+  },
+  {
+    "nombre": "Rapid7 InsightVM",
+    "descripcion": "Solución de gestión de vulnerabilidades que prioriza vulnerabilidades críticas mediante análisis inteligentes.",
+    "link": "https://www.rapid7.com/products/insightvm/"
+  },
+  {
+    "nombre": "OpenVAS",
+    "descripcion": "Escáner de vulnerabilidades open source basado en Greenbone, con amplia cobertura de vulnerabilidades y reportes completos.",
+    "link": "https://www.greenbone.net/en/openvas/"
+  },
+  {
+    "nombre": "Acunetix",
+    "descripcion": "Escáner especializado en vulnerabilidades web con capacidades avanzadas para detectar vulnerabilidades OWASP.",
+    "link": "https://www.acunetix.com/"
+  },
+  {
+    "nombre": "GFI LanGuard",
+    "descripcion": "Plataforma integrada que combina gestión de vulnerabilidades, auditoría y parches automatizados.",
+    "link": "https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-languard"
+  },
+  {
+    "nombre": "Tripwire IP360",
+    "descripcion": "Solución empresarial que proporciona visibilidad completa y gestión avanzada del riesgo asociado a vulnerabilidades.",
+    "link": "https://www.tripwire.com/products/tripwire-ip360"
+  },
+  {
+    "nombre": "Microsoft Defender Vulnerability Management",
+    "descripcion": "Gestión avanzada de vulnerabilidades integrada en el ecosistema Microsoft Defender, con remediación proactiva.",
+    "link": "https://www.microsoft.com/es-es/security/business/threat-protection/microsoft-defender-vulnerability-management"
+  },
+  {
+    "nombre": "BeyondTrust Retina",
+    "descripcion": "Solución escalable de gestión y escaneo de vulnerabilidades, especialmente diseñada para grandes infraestructuras.",
+    "link": "https://www.beyondtrust.com/vulnerability-management"
+  },
+  {
+    "nombre": "Ivanti Neurons for Vulnerability Management",
+    "descripcion": "Plataforma basada en IA para identificar, priorizar y remediar vulnerabilidades en tiempo real.",
+    "link": "https://www.ivanti.com/products/ivanti-neurons-vulnerability-management"
+  }
+],
+"IDS/IPS": [
+  {
+    "nombre": "Suricata",
+    "descripcion": "IDS/IPS open source que ofrece alto rendimiento, detección avanzada y análisis profundo del tráfico de red.",
+    "link": "https://suricata.io/"
+  },
+  {
+    "nombre": "Snort",
+    "descripcion": "Sistema IDS/IPS open source ampliamente utilizado, que permite monitoreo en tiempo real y análisis detallado de paquetes.",
+    "link": "https://www.snort.org/"
+  },
+  {
+    "nombre": "Cisco Secure IPS (Firepower)",
+    "descripcion": "IPS empresarial de Cisco, integrado en soluciones Firepower, con protección avanzada ante amenazas y gestión centralizada.",
+    "link": "https://www.cisco.com/c/en/us/products/security/ngips/index.html"
+  },
+  {
+    "nombre": "Trend Micro TippingPoint",
+    "descripcion": "Solución IPS de alto rendimiento con prevención en tiempo real, diseñada para redes empresariales críticas.",
+    "link": "https://www.trendmicro.com/es_mx/business/products/network/intrusion-prevention.html"
+  },
+  {
+    "nombre": "Palo Alto Threat Prevention",
+    "descripcion": "IPS integrado en NGFW de Palo Alto Networks, con prevención proactiva y basada en inteligencia artificial.",
+    "link": "https://www.paloaltonetworks.com/network-security/threat-prevention"
+  },
+  {
+    "nombre": "IBM Security Network IPS",
+    "descripcion": "IPS robusto con capacidades avanzadas de detección de intrusiones y protección de redes empresariales.",
+    "link": "https://www.ibm.com/products/network-ips"
+  },
+  {
+    "nombre": "Alert Logic Managed Detection and Response",
+    "descripcion": "Servicio gestionado que combina IDS/IPS con detección y respuesta frente a amenazas en múltiples entornos.",
+    "link": "https://www.alertlogic.com/"
+  },
+  {
+    "nombre": "Check Point IPS Software Blade",
+    "descripcion": "IPS integrado en soluciones Check Point NGFW, protección avanzada contra amenazas conocidas y desconocidas.",
+    "link": "https://www.checkpoint.com/products/intrusion-prevention-system-ips/"
+  },
+  {
+    "nombre": "Hillstone Networks IPS",
+    "descripcion": "Solución IPS de alto rendimiento, diseñada para redes medianas y grandes, con detección precisa y prevención efectiva.",
+    "link": "https://www.hillstonenet.com/products/ngfw/intrusion-prevention/"
+  },
+  {
+    "nombre": "Vectra AI Threat Detection & Response",
+    "descripcion": "Plataforma IDS basada en IA que proporciona detección automática y respuesta rápida frente a intrusiones avanzadas.",
+    "link": "https://www.vectra.ai/"
+  }
+]
+
+}

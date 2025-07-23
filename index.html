@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="data:,">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Team Toolkit</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans" x-data="appData()" x-init="init()" x-cloak>
+
+<header class="bg-gray-800 text-white flex items-center justify-between px-0 py-0 h-20">
+  <div class="flex items-stretch">
+    <img src="img/logoblueopstools.png" alt="Logo BlueOps Tools" class="h-full max-h-20 w-auto object-contain" />
+  </div>
+  <div class="flex items-center justify-between w-full px-4">
+    <div>
+      <h1 class="text-2xl font-bold">BlueOps Tools</h1>
+      <p class="text-sm text-gray-300">Listado profesional de herramientas defensivas</p>
+    </div>
+    <nav class="flex items-center space-x-6 text-sm">
+      <!-- Filtro de Licencia visible siempre -->
+      <div class="flex items-center space-x-2">
+        <label class="text-sm text-gray-300">Licencia:</label>
+        <select x-model="filtros.licencia" class="bg-gray-700 text-white text-sm p-2 rounded border border-gray-600">
+          <option value="">Todas</option>
+          <option value="Open Source">Open Source</option>
+          <option value="Comercial">Comercial</option>
+          <option value="N/D">Sin especificar</option>
+        </select>
+      </div>
+      <!-- Botones -->
+      <button @click="seccion = 'tools'">Herramientas</button>
+      <button @click="seccion = 'utilidades'">Utilidades</button>
+      <button @click="seccion = 'posts'">Posts</button>
+      <button @click="seccion = 'ranking'">Ranking</button>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto py-8 px-4">
+
+  <div x-show="seccion === 'tools'" x-transition>
+    <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 px-2">
+      <div class="flex items-center space-x-4">
+        <!----<div class="flex items-center space-x-2">
+          <label class="text-sm text-gray-300">Licencia:</label>
+          <select x-model="filtros.licencia" class="bg-gray-700 text-white text-sm p-2 rounded border border-gray-600" @change="actualizarGraficoHerramientas()">
+            <option value="">Todas</option>
+            <option value="Open Source">Open Source</option>
+            <option value="Comercial">Comercial</option>
+            <option value="N/D">Sin especificar</option>
+          </select>
+        </div>----->
+        <div class="text-sm text-gray-400" x-text="`Total de herramientas encontradas: ${Object.values(categoriasFiltradas).flat().length}`"></div>
+      </div>
+    </div>
+
+    <template x-for="(herramientas, categoria) in categoriasFiltradas" :key="categoria">
+      <div class="mb-4 border border-gray-700 rounded shadow-sm bg-gray-800">
+        <button @click="abierto === categoria ? abierto = null : abierto = categoria"
+                class="w-full text-center bg-gray-700 text-white px-4 py-2 hover:bg-gray-600 rounded-t font-semibold uppercase"
+                x-text="categoria">
+        </button>
+        <div x-show="abierto === categoria" x-transition class="bg-gray-900 p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <template x-for="tool in herramientas" :key="tool.nombre">
+              <div class="bg-gray-800 border border-gray-700 rounded p-3 shadow hover:shadow-md transition">
+                <h3 class="font-semibold text-blue-400 flex items-center justify-between">
+                  <span x-text="tool.nombre"></span>
+                  <template x-if="tool.licencia">
+                    <span class="ml-2 px-2 py-1 text-xs rounded-full font-semibold"
+                          :class="{
+                            'bg-green-600 text-white': tool.licencia.toLowerCase().includes('open'),
+                            'bg-yellow-600 text-black': tool.licencia.toLowerCase().includes('comercial'),
+                            'bg-red-600 text-white': tool.licencia.toLowerCase().includes('pago')
+                          }"
+                          x-text="tool.licencia">
+                    </span>
+                  </template>
+                </h3>
+                <p class="text-sm text-gray-300" x-text="tool.descripcion"></p>
+                <a :href="tool.link" target="_blank" class="text-blue-300 text-sm hover:underline block mt-1">Sitio oficial</a>
+                <template x-if="tool.guias && tool.guias.length > 0">
+                  <button @click="abrirGuia(tool.guias)" class="text-blue-400 text-xs hover:underline block">
+                    Guías (<span x-text="tool.guias.length"></span>)
+                  </button>
+                </template>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <div class="mt-10 bg-gray-800 p-6 rounded-lg shadow border border-gray-700">
+      <canvas id="chartHerramientas" class="w-full h-64"></canvas>
+      <div id="resumenHerramientas" class="text-white mt-4 text-sm px-4"></div>
+    </div>
+  </div>
+  
+  <!-- Sección de Utilidades -->
+  <div x-show="seccion === 'utilidades'" x-transition>
+    <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 px-2">
+      <div class="flex items-center space-x-4">
+        <div class="text-sm text-gray-400" x-text="`Total de utilidades encontradas: ${Object.values(utilidadesFiltradas).flat().length}`"></div>
+      </div>
+    </div>
+
+    <template x-for="(herramientas, categoria) in utilidadesFiltradas" :key="categoria">
+      <div class="mb-4 border border-gray-700 rounded shadow-sm bg-gray-800">
+        <button @click="abierto === categoria ? abierto = null : abierto = categoria"
+                class="w-full text-center bg-gray-700 text-white px-4 py-2 hover:bg-gray-600 rounded-t font-semibold uppercase"
+                x-text="categoria">
+        </button>
+        <div x-show="abierto === categoria" x-transition class="bg-gray-900 p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <template x-for="tool in herramientas" :key="tool.nombre">
+              <div class="bg-gray-800 border border-gray-700 rounded p-3 shadow hover:shadow-md transition">
+                <h3 class="font-semibold text-blue-400 flex items-center justify-between">
+                  <span x-text="tool.nombre"></span>
+                  <template x-if="tool.licencia">
+                    <span class="ml-2 px-2 py-1 text-xs rounded-full font-semibold"
+                          :class="{
+                            'bg-green-600 text-white': tool.licencia.toLowerCase().includes('open'),
+                            'bg-yellow-600 text-black': tool.licencia.toLowerCase().includes('comercial'),
+                            'bg-gray-600 text-white': tool.licencia.toLowerCase().includes('free')
+                          }"
+                          x-text="tool.licencia">
+                    </span>
+                  </template>
+                </h3>
+                <p class="text-sm text-gray-300" x-text="tool.descripcion"></p>
+                <a :href="tool.link" target="_blank" class="text-blue-300 text-sm hover:underline block mt-1">Sitio oficial</a>
+                <template x-if="tool.guias && tool.guias.length > 0">
+                  <button @click="abrirGuia(tool.guias)" class="text-blue-400 text-xs hover:underline block">
+                    Guías (<span x-text="tool.guias.length"></span>)
+                  </button>
+                </template>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <div class="mt-10 bg-gray-800 p-6 rounded-lg shadow border border-gray-700">
+      <canvas id="chartUtilidades" class="w-full h-64"></canvas>
+      <div id="resumenUtilidades" class="text-white mt-4 text-sm px-4"></div>
+    </div>
+
+  </div>
+
+   
+
+  <!-- Posts-->
+  <div x-show="seccion === 'posts'" x-transition><p class="text-gray-300">Próximamente…</p></div>
+
+<!-- Sección Ranking de Colaboradores -->
+<div x-show="seccion === 'ranking'" x-transition class="min-h-screen">
+  
+  <!-- Indicador fuera del contenedor del gráfico -->
+  <div class="mt-6 text-white text-sm px-2">
+    🔹 <strong>Total de colaboradores:</strong> <span x-text="totalColaboradores"></span>
+  </div>
+
+  <!-- Contenedor del gráfico -->
+  <div class="bg-gray-800 p-6 rounded-lg shadow border border-gray-700 mt-4">
+    <h2 class="text-xl font-bold mb-4 text-white">Ranking de Colaboradores</h2>
+    <canvas id="chartColaboradores" class="w-full" style="height: 300px;"></canvas>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal de Guías -->
+<div x-show="guiaActiva && guiaActiva.length > 0" x-transition class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+  <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-md w-full border border-gray-700">
+    <h2 class="text-lg font-bold mb-4 text-white">
+      Guías disponibles (<span x-text="(guiaActiva && guiaActiva.length) || 0"></span>
+)
+    </h2>
+    <ul class="space-y-2 max-h-60 overflow-auto pr-2">
+      <template x-for="(guia, index) in guiaActiva" :key="index">
+        <li>
+          <a :href="guia.url" target="_blank" class="text-blue-300 hover:underline block">
+            <span x-text="guia.nombre"></span>
+            <span class="text-gray-400 text-xs ml-2" x-text="`(${guia.colaborador || guia.autor || 'Autor desconocido'})`"></span>
+          </a>
+        </li>
+      </template>
+    </ul>
+    <button @click="guiaActiva = null" class="mt-4 text-sm text-gray-400 hover:underline">Cerrar</button>
+  </div>
+</div>
+
+
+
+
+</main>
+
+<footer class="text-center text-sm text-gray-500 py-6 border-t border-gray-700">
+  © 2025 - Sitio de herramientas defensivas profesionales
+</footer>
+
+</body>
+</html>

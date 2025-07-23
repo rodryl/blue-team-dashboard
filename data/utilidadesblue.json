@@ -1,0 +1,295 @@
+{
+  "Auditoría": [
+    {
+      "nombre": "Autoruns",
+      "descripcion": "Muestra todos los programas que se ejecutan automáticamente al iniciar el sistema.",
+      "link": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "Guía oficial", "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns", "colaborador": "Romina Torres" }]
+    },
+    {
+      "nombre": "AccessChk",
+      "descripcion": "Permite ver los permisos efectivos sobre archivos, claves de registro y servicios.",
+      "link": "https://learn.microsoft.com/en-us/sysinternals/downloads/accesschk",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "Permisos efectivos", "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/accesschk", "colaborador": "Carlos Gómez" }]
+    },
+    {
+      "nombre": "NTFS Permissions Reporter",
+      "descripcion": "Exporta los permisos NTFS de forma visual.",
+      "link": "https://www.cjwdev.co.uk/Software/NtfsReports/Info.html",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "Visualizando NTFS", "url": "https://www.cjwdev.co.uk/Software/NtfsReports/Info.html", "colaborador": "Micaela Ruiz" }]
+    },
+    {
+      "nombre": "PowerView",
+      "descripcion": "Audita entornos de Active Directory mediante PowerShell.",
+      "link": "https://github.com/PowerShellMafia/PowerSploit/tree/master/Recon",
+      "licencia": "Open Source",
+      "guias": [{ "nombre": "Recon Active Directory", "url": "https://github.com/PowerShellMafia/PowerSploit", "colaborador": "Joaquín Medina" }]
+    },
+    {
+      "nombre": "SharpHound",
+      "descripcion": "Recolecta datos de dominio para análisis de relaciones en AD.",
+      "link": "https://github.com/BloodHoundAD/SharpHound",
+      "licencia": "Open Source",
+      "guias": [{ "nombre": "Mapeo de relaciones en AD", "url": "https://github.com/BloodHoundAD/SharpHound", "colaborador": "Valeria Sosa" }]
+    }
+  ],
+  "Forense": [
+    {
+      "nombre": "FTK Imager",
+      "descripcion": "Herramienta para crear imágenes forenses de discos y archivos.",
+      "link": "https://accessdata.com/product-download/ftk-imager-version-4-2",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "Captura forense", "url": "https://accessdata.com/product-download/ftk-imager-version-4-2", "colaborador": "Natalia Duarte" }]
+    },
+    {
+      "nombre": "Autopsy",
+      "descripcion": "Interfaz gráfica para el análisis forense de discos.",
+      "link": "https://www.autopsy.com",
+      "licencia": "Open Source",
+      "guias": [{ "nombre": "Investigación básica", "url": "https://www.autopsy.com", "colaborador": "Leandro Paz" }]
+    },
+    {
+      "nombre": "Volatility",
+      "descripcion": "Framework para análisis de memoria RAM.",
+      "link": "https://www.volatilityfoundation.org",
+      "licencia": "Open Source",
+      "guias": [{ "nombre": "Análisis de memoria", "url": "https://www.volatilityfoundation.org", "colaborador": "Julia Peralta" }]
+    },
+    {
+      "nombre": "USBDeview",
+      "descripcion": "Lista todos los dispositivos USB conectados.",
+      "link": "https://www.nirsoft.net/utils/usb_devices_view.html",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "Registro de dispositivos", "url": "https://www.nirsoft.net/utils/usb_devices_view.html", "colaborador": "Esteban Acuña" }]
+    },
+    {
+      "nombre": "Redline",
+      "descripcion": "Herramienta de análisis de endpoints para respuesta forense.",
+      "link": "https://www.fireeye.com/services/freeware/redline.html",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "Análisis con Redline", "url": "https://www.fireeye.com/services/freeware/redline.html", "colaborador": "Carla Villalba" }]
+    }
+  ],
+  "Análisis de Logs": [
+    {
+      "nombre": "LogParser",
+      "descripcion": "Permite realizar consultas SQL sobre logs de Windows.",
+      "link": "https://www.microsoft.com/en-us/download/details.aspx?id=24659",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "SQL para logs", "url": "https://www.microsoft.com/en-us/download/details.aspx?id=24659", "colaborador": "Luciano Franco" }]
+    },
+    {
+      "nombre": "Event Log Explorer",
+      "descripcion": "Visualiza eventos del visor de eventos con más funcionalidades.",
+      "link": "https://eventlogxp.com",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "Eventos avanzados", "url": "https://eventlogxp.com", "colaborador": "Mariela Torres" }]
+    },
+    {
+      "nombre": "Chainsaw",
+      "descripcion": "Analizador rápido de logs de eventos EVTX para detección de amenazas.",
+      "link": "https://github.com/WithSecureLabs/chainsaw",
+      "licencia": "Open Source",
+      "guias": [{ "nombre": "EVTX avanzado", "url": "https://github.com/WithSecureLabs/chainsaw", "colaborador": "Rodrigo García" }]
+    },
+    {
+      "nombre": "EvtxECmd",
+      "descripcion": "Parser de EVTX con soporte de templates de análisis.",
+      "link": "https://ericzimmerman.github.io/#!index.md",
+      "licencia": "Freeware",
+      "guias": [{ "nombre": "Parser detallado", "url": "https://ericzimmerman.github.io", "colaborador": "Tomás Rivas" }]
+    },
+    {
+      "nombre": "Wazuh",
+      "descripcion": "Plataforma SIEM para análisis y correlación de eventos.",
+      "link": "https://wazuh.com",
+      "licencia": "Open Source",
+      "guias": [{ "nombre": "SIEM open source", "url": "https://wazuh.com", "colaborador": "Valentina Díaz" }]
+    }
+  ],
+  "Monitoreo de Red": [
+    {
+      "nombre": "Wireshark",
+      "descripcion": "Analizador de protocolos de red.",
+      "link": "https://www.wireshark.org/",
+      "licencia": "Open Source",
+      "guias": [
+        { "nombre": "Captura básica de paquetes", "url": "https://www.wireshark.org/docs/wsug_html_chunked/", "colaborador": "Nicolás Rivas" }
+      ]
+    },
+    {
+      "nombre": "ntopng",
+      "descripcion": "Monitor de tráfico en tiempo real.",
+      "link": "https://www.ntop.org/products/traffic-analysis/ntop/",
+      "licencia": "Open Source",
+      "guias": [
+        { "nombre": "Guía rápida ntopng", "url": "https://www.ntop.org/guides/ntopng/", "colaborador": "Luis Méndez" }
+      ]
+    },
+    {
+      "nombre": "TCPDump",
+      "descripcion": "Herramienta de línea de comandos para capturar tráfico de red.",
+      "link": "https://www.tcpdump.org/",
+      "licencia": "Open Source",
+      "guias": [
+        { "nombre": "Uso básico de TCPDump", "url": "https://danielmiessler.com/study/tcpdump/", "colaborador": "Ana Páez" }
+      ]
+    },
+    {
+      "nombre": "EtherApe",
+      "descripcion": "Visualizador gráfico de tráfico de red.",
+      "link": "https://etherape.sourceforge.net/",
+      "licencia": "Open Source",
+      "guias": [
+        { "nombre": "Visualizando redes con EtherApe", "url": "https://www.linuxlinks.com/EtherApe/", "colaborador": "Gabriel López" }
+      ]
+    },
+    {
+      "nombre": "PRTG Network Monitor",
+      "descripcion": "Monitor de red con interfaz gráfica.",
+      "link": "https://www.paessler.com/prtg",
+      "licencia": "Comercial",
+      "guias": [
+        { "nombre": "Configuración inicial", "url": "https://www.paessler.com/learn/videos", "colaborador": "Lucía Cabrera" }
+      ]
+    }
+  ],
+  "Virtualización y Sandboxing": [
+    {
+      "nombre": "Cuckoo Sandbox",
+      "descripcion": "Automatiza el análisis de malware en entornos virtuales controlados.",
+      "link": "https://cuckoosandbox.org/",
+      "licencia": "Open Source",
+      "guias": [
+        {
+          "nombre": "Guía de instalación",
+          "url": "https://docs.cuckoosandbox.org/en/latest/installation/",
+          "colaborador": "Nicolás Ortega"
+        }
+      ]
+    },
+    {
+      "nombre": "Firejail",
+      "descripcion": "Sandbox de seguridad para aplicaciones Linux, reduce exposición a vulnerabilidades.",
+      "link": "https://firejail.wordpress.com/",
+      "licencia": "Open Source",
+      "guias": [
+        {
+          "nombre": "Guía de uso con Firefox",
+          "url": "https://wiki.archlinux.org/title/Firejail",
+          "colaborador": "Martina Suárez"
+        }
+      ]
+    },
+    {
+      "nombre": "Any.Run",
+      "descripcion": "Sandbox interactivo online para análisis de malware.",
+      "link": "https://any.run/",
+      "licencia": "Comercial",
+      "guias": [
+        {
+          "nombre": "Manual básico",
+          "url": "https://any.run/help/getting-started/",
+          "colaborador": "Carlos Luna"
+        }
+      ]
+    },
+    {
+      "nombre": "ThreatAnalyzer",
+      "descripcion": "Plataforma de sandboxing para análisis de comportamiento de malware.",
+      "link": "https://www.fidelissecurity.com/products/threatanalyzer/",
+      "licencia": "Comercial",
+      "guias": [
+        {
+          "nombre": "Primeros pasos",
+          "url": "https://www.fidelissecurity.com/",
+          "colaborador": "Victoria Álvarez"
+        }
+      ]
+    },
+    {
+      "nombre": "Joe Sandbox",
+      "descripcion": "Solución avanzada de análisis dinámico de archivos sospechosos.",
+      "link": "https://www.joesecurity.org/",
+      "licencia": "Comercial",
+      "guias": [
+        {
+          "nombre": "Guía del usuario",
+          "url": "https://www.joesecurity.org/documentation",
+          "colaborador": "Esteban Ríos"
+        }
+      ]
+    }
+  ],
+  "Herramientas de Control de Cuentas": [
+    {
+      "nombre": "LAPS",
+      "descripcion": "Microsoft Local Administrator Password Solution para gestionar contraseñas locales.",
+      "link": "https://www.microsoft.com/en-us/download/details.aspx?id=46899",
+      "licencia": "Freeware",
+      "guias": [
+        {
+          "nombre": "Guía oficial",
+          "url": "https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview",
+          "colaborador": "Ana Beltrán"
+        }
+      ]
+    },
+    {
+      "nombre": "Specops Password Auditor",
+      "descripcion": "Audita contraseñas vulnerables y expuestas en Active Directory.",
+      "link": "https://specopssoft.com/product/specops-password-auditor/",
+      "licencia": "Freeware",
+      "guias": [
+        {
+          "nombre": "Guía rápida",
+          "url": "https://specopssoft.com/blog/specops-password-auditor-quickstart-guide/",
+          "colaborador": "Lucas Varela"
+        }
+      ]
+    },
+    {
+      "nombre": "KeePass",
+      "descripcion": "Gestor de contraseñas de código abierto.",
+      "link": "https://keepass.info/",
+      "licencia": "Open Source",
+      "guias": [
+        {
+          "nombre": "Guía de uso",
+          "url": "https://keepass.info/help/base/index.html",
+          "colaborador": "Lorena Díaz"
+        }
+      ]
+    },
+    {
+      "nombre": "Password Policy Tool",
+      "descripcion": "Evalúa y aplica políticas de contraseñas en sistemas Windows.",
+      "link": "https://www.nsoftware.com/",
+      "licencia": "Comercial",
+      "guias": [
+        {
+          "nombre": "Configuración de políticas",
+          "url": "https://www.netwrix.com/password_policy_enforcer.html",
+          "colaborador": "Iván Godoy"
+        }
+      ]
+    },
+    {
+      "nombre": "Hashcat",
+      "descripcion": "Herramienta de recuperación y auditoría de contraseñas mediante cracking.",
+      "link": "https://hashcat.net/hashcat/",
+      "licencia": "Open Source",
+      "guias": [
+        {
+          "nombre": "Guía de inicio",
+          "url": "https://hashcat.net/wiki/",
+          "colaborador": "Verónica Salas"
+        }
+      ]
+    }
+  ]
+
+}
