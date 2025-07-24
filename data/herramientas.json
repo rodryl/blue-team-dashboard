@@ -6,10 +6,10 @@
       "link": "https://wazuh.com",
       "guias": [
         {
-          "nombre": "Guía Inicial", "url": "http://linktest.com", "colaborador": "Romina Torres"
+          "nombre": "Guía Inicial", "url": "http://linktest.com"
         },
         {
-         "nombre": "Guía Intermedia", "url": "http://linktest.com", "colaborador": "Romina Torres"
+         "nombre": "Guía Intermedia", "url": "http://linktest.com"
         }
 
       ],
@@ -22,10 +22,10 @@
       "link": "https://www.splunk.com",
       "guias": [
         {
-          "nombre": "Guía Inicial", "url": "http://linktest.com", "colaborador": "Rodrigo Quintana"
+          "nombre": "Guía Inicial", "url": "http://linktest.com"
         },
         {
-         "nombre": "Guía Intermedia", "url": "http://linktest.com", "colaborador": "Rodrigo Quintana"
+         "nombre": "Guía Intermedia", "url": "http://linktest.com"
         }
 
       ], 

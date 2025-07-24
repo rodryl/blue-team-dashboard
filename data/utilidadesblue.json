@@ -5,7 +5,7 @@
       "descripcion": "Muestra todos los programas que se ejecutan automáticamente al iniciar el sistema.",
       "link": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns",
       "licencia": "Freeware",
-      "guias": [{ "nombre": "Guía oficial", "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns", "colaborador": "Romina Torres" }]
+      "guias": [{ "nombre": "Guía oficial", "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns" }]
     },
     {
       "nombre": "AccessChk",
